@@ -1,0 +1,39 @@
+body 
+{
+	height: 100%;
+}
+
+.main
+{
+	min-width:800px;
+    min-height:700px;
+	width: 800px;
+	height: 700px;
+	margin: auto;
+}
+
+.canvas 
+{
+	width: 90%;
+	height: 90%;
+	border: 2px solid black;
+	margin: auto;
+}
+
+.score
+{
+	font-size: 20px;
+	float: left;
+}
+
+.star
+{
+	width: 25px;
+	height: 25px;
+}
+
+.backToMenu
+{
+	float: right;
+	margin-right: 75px;
+}
