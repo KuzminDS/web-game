@@ -24,7 +24,7 @@ class Item
 	{
 		if(!this.isPlayer)
 		{
-			this.y += speed;
+			this.y += speed + levelSpeed;
 		}
 
 		if(this.y > canvas.height + 50)
@@ -92,6 +92,7 @@ var level = document.getElementById("level")
 
 var scaleX = 0.3
 var scaleY = 0.3
+var levelSpeed = 0.1
 
 Resize();
 
@@ -188,7 +189,7 @@ function Update()
 		if (hit && objects[i].isBonus)
 		{
 			UpdateScore()
-			objects.splice(i)
+			objects.splice(i, 1)
 			i--
 		}
 		else if (hit)
@@ -210,9 +211,10 @@ function UpdateScore() {
 	var demand = parseInt(demandCount.innerHTML)
 	var levelNumber = parseInt(level.innerHTML)
 	if (score == demand) {
-		level.innerHTML = ++levelNumber
 		scoreCount.innerHTML = 0
 		demandCount.innerHTML = levelNumber * demand
+		level.innerHTML = ++levelNumber
+		levelSpeed *= levelNumber;
 	}
 	else {
 		scoreCount.innerHTML = score

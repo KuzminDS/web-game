@@ -3,6 +3,13 @@ body
 	height: 100%;
 }
 
+.mainMenu
+{
+	margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+}
+
 .main
 {
 	min-width:800px;
